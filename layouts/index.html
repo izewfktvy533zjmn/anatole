@@ -2,7 +2,7 @@
 
 <div class="about animated fadeInDown">
     {{ range first 10 .Site.RegularPages }}
-        {{ if eq .Type "post"}}
+        {{ if eq .Type "posts"}}
         <div>
             <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
             {{ .Summary }}
