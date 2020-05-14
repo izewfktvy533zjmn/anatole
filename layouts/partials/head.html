@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="{{ .Site.Title }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
 
-    {{ with .Params.thumbnail }}
+    {{ with .Params.thumbnail | default ($.Param "thumbnail") }}
     <meta property="og:image" content="{{ . | absURL }}" />
     <meta name="twitter:image" content="{{ . | absURL }}" />
     {{ end }}
