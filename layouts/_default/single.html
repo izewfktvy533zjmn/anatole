@@ -22,6 +22,10 @@
       </div>
     </div>
 
+    {{ if eq .Site.Params.commpost true }}
+    {{ partial "commpost.html" . }}
+    {{ end }}
+
     {{ if eq .Type "post"}}
     {{ if .Site.DisqusShortname -}}
     <div id="fb_comments_container">
